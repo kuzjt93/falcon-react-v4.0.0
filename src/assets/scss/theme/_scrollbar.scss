@@ -1,0 +1,106 @@
+/*-----------------------------------------------
+|   Scrollbar style for windows
+-----------------------------------------------*/
+@import 'simplebar/dist/simplebar.min.css';
+
+// .simplebar-track {
+//     .simplebar-vertical {
+//       background-color: orange;
+//     }
+// }
+
+.simplebar-scrollbar {
+  &::before {
+    background-color: var(--#{$prefix}gray-400);
+  }
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+.simplebar-scrollbar.simplebar-visible {
+  &:before {
+    opacity: 0.55;
+  }
+}
+
+.scrollbar-overlay {
+  overflow: hidden !important;
+}
+// .windows, .osx {
+//   &.chrome{
+//     .scrollbar{
+//       @include chrome-scrollbar;
+//     }
+//     .navbar-vibrant{
+//      .scrollbar{
+//         @include chrome-scrollbar(rgba($white, 0.4));
+//       }
+//     }
+//   }
+//   &.safari{
+//     .scrollbar{
+//       @include chrome-scrollbar;
+//     }
+//     .navbar-vibrant{
+//      .scrollbar{
+//         @include chrome-scrollbar(rgba($white, 0.4));
+//       }
+//     }
+//   }
+//   &.firefox{
+//     .scrollbar{
+//       @include firefox-scrollbar;
+//     }
+//     .navbar-vibrant{
+//      .scrollbar{
+//         @include firefox-scrollbar(rgba($white, 0.4));
+//       }
+//     }
+//   }
+// }
+.scrollbar {
+  @include chrome-scrollbar;
+}
+.overflow-x-hidden {
+  overflow-x: hidden !important;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden !important;
+}
+.navbar-vibrant {
+  .scrollbar {
+    @include chrome-scrollbar(rgba($white, 0.4));
+  }
+}
+
+.firefox {
+  .scrollbar {
+    @include firefox-scrollbar;
+  }
+  .navbar-vibrant {
+    .scrollbar {
+      @include firefox-scrollbar(rgba($white, 0.4));
+    }
+  }
+  .overflow-x-hidden {
+    overflow-x: hidden !important;
+  }
+
+  .overflow-y-hidden {
+    overflow-y: hidden !important;
+  }
+}
+
+.os-theme-dark {
+  & > .os-scrollbar {
+    & > .os-scrollbar-track > .os-scrollbar-handle {
+      background: $scrollbar-bg;
+    }
+    @include hover-focus {
+      & > .os-scrollbar-track > .os-scrollbar-handle {
+        background: $scrollbar-bg;
+      }
+    }
+  }
+}

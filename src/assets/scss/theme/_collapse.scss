@@ -1,0 +1,26 @@
+.collapse-indicator-plus {
+  position: relative;
+
+  &:after {
+    content: '\002B';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    font-size: 1.2rem;
+    line-height: 0;
+    font-weight: $font-weight-medium;
+    color: inherit;
+    transition: $transition-base;
+    transition-property: transform;
+  }
+  &:before {
+    display: none;
+  }
+  &[aria-expanded='true']:after {
+    margin-left: 2px;
+    margin-bottom: 6px;
+    content: '\2212';
+    transform: rotate(-180deg);
+  }
+}

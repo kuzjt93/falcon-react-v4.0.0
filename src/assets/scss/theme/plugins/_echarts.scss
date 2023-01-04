@@ -1,0 +1,19 @@
+.echart-active-users-report-container {
+  @include media-breakpoint-up(md) {
+    width: calc(100% - 120px);
+  }
+}
+
+.echart-closed-vs-goal {
+  min-height: 15rem;
+  @include media-breakpoint-up(xxl) {
+    min-height: 14rem !important;
+  }
+}
+
+// support desk
+.echart-unresolved-tickets-container {
+  @include media-breakpoint-up(md) {
+    width: calc(100% - 7.1rem);
+  }
+}

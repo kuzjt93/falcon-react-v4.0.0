@@ -1,0 +1,99 @@
+.slick-slider {
+  @include hover-focus {
+    .slick-arrow {
+      opacity: 0.5;
+    }
+  }
+  .slick-arrow {
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--#{$prefix}slick-arrow-bg) !important;
+    transition: opacity 0.4s ease-in-out;
+    box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+    color: var(--#{$prefix}gray-700);
+    opacity: 0;
+    z-index: 999;
+    &:before {
+      display: none;
+    }
+
+    @include hover-focus {
+      opacity: 1;
+    }
+  }
+  .slick-next,
+  .slick-prev {
+    &:after {
+      content: '';
+      position: absolute;
+      height: 0.5rem;
+      width: 0.5rem;
+      left: 50%;
+      top: 50%;
+      background-color: transparent;
+      border-right: 1px solid var(--#{$prefix}black);
+      border-top: 1px solid var(--#{$prefix}black);
+    }
+  }
+
+  .slick-next:after {
+    transform: translate3d(-60%, -50%, 0) rotate(45deg);
+  }
+  .slick-prev:after {
+    transform: translate3d(-40%, -50%, 0) rotate(-135deg);
+  }
+
+  &.slick-slider-arrow-inner {
+    .slick-next {
+      right: 1rem;
+    }
+    .slick-prev {
+      left: 1rem;
+    }
+  }
+}
+
+.product-slider {
+  position: relative;
+  @include media-breakpoint-up(lg) {
+    height: calc(100% - 3.5625rem);
+  }
+
+  @include media-breakpoint-up(xl) {
+    height: calc(100% - 3.3125rem);
+  }
+
+  @include media-breakpoint-up(xxl) {
+    height: calc(100% - 4.75rem);
+  }
+}
+
+.full-height-slider {
+  .slick-list {
+    height: 100%;
+
+    .slick-track {
+      height: 100%;
+
+      .slick-slide {
+        height: 100%;
+      }
+
+      .slick-slide > div {
+        height: 100%;
+      }
+    }
+  }
+}
+
+.slick-list {
+  .slick-track {
+    display: flex;
+    gap: 10px;
+    padding: 20px 0;
+    .slick-slide {
+      height: auto !important;
+    }
+  }
+}

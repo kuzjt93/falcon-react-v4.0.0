@@ -1,0 +1,79 @@
+.react-select__control {
+  min-height: unset !important;
+  padding-left: 1rem;
+  &.react-select__control--is-focused {
+    border-color: $form-select-focus-border-color !important;
+    outline: 0;
+    box-shadow: $form-select-focus-box-shadow !important;
+  }
+  background-color: $input-bg !important;
+  border: $form-select-border-width solid $form-select-border-color !important;
+  @include box-shadow($form-select-box-shadow);
+
+  .react-select__value-container {
+    padding: 0;
+  }
+
+  .react-select__placeholder {
+    color: var(--#{$prefix}input-placeholder-color);
+    margin: 0;
+  }
+  @include hover-focus {
+    outline: none !important;
+  }
+  .react-select__input-container {
+    margin: 0;
+  }
+  .react-select__value-container {
+    &.react-select__value-container--has-value {
+      padding-top: 4px;
+      padding-bottom: 4px;
+    }
+  }
+  .react-select__multi-value {
+    border-radius: $border-radius;
+    background-color: var(--#{$prefix}gray-200) !important;
+    .react-select__multi-value__remove {
+      // background-color: var(--#{$prefix}gray-300) !important;
+      border-radius: 0 2px 2px 0 !important;
+      &:hover {
+        background-color: unset !important;
+        color: var(--#{$prefix}gray-900) !important;
+      }
+    }
+  }
+  .react-select__multi-value__label {
+    color: var(--#{$prefix}body-color) !important;
+    font-size: 12px;
+  }
+  .react-select__single-value {
+    color: var(--#{$prefix}body-color) !important;
+  }
+}
+.react-select__menu {
+  background-color: $input-bg !important;
+  z-index: $zindex-modal !important;
+
+  .react-select__option {
+    padding-left: $card-spacer-x;
+    padding-right: $card-spacer-x;
+    color: var(--#{$prefix}gray-900) !important;
+    margin-bottom: 5px;
+  }
+}
+
+.react-select__indicator-separator {
+  background-color: var(--#{$prefix}react-select-indicator-bg) !important;
+}
+
+.react-select__indicator svg {
+  color: var(--#{$prefix}react-select-indicator-bg) !important;
+}
+
+.react-select__option--is-focused {
+  background-color: var(--#{$prefix}soft-primary) !important;
+}
+.react-select__option--is-selected {
+  background-color: var(--#{$prefix}primary) !important;
+  color: var(--#{$prefix}black) !important;
+}

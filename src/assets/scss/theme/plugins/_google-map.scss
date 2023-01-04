@@ -1,0 +1,25 @@
+.gm-fullscreen-control,
+.gm-svpc,
+.gmnoprint * {
+  background-color: var(--#{$prefix}card-bg) !important;
+  color: inherit !important;
+}
+
+.gm-style .gm-style-iw-d::-webkit-scrollbar-track,
+.gm-style .gm-style-iw-d::-webkit-scrollbar-track-piece,
+.gm-style .gm-style-iw-c,
+.gm-style .gm-style-iw-t::after {
+  background: var(--#{$prefix}card-bg);
+}
+
+button.gm-ui-hover-effect {
+  top: 0 !important;
+  right: 0 !important;
+
+  & > span {
+    background-color: var(--#{$prefix}black);
+    width: 1.25rem !important;
+    height: 1.25rem !important;
+    margin: 0 0 0 5px !important;
+  }
+}

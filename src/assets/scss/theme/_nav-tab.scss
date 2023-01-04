@@ -1,0 +1,71 @@
+.nav-tabs {
+  border-bottom: 2px solid var(--#{$prefix}border-color);
+
+  .nav-link {
+    margin-bottom: -$nav-tabs-border-width;
+    border: var(--#{$prefix}border-color);
+    color: var(--#{$prefix}gray-800);
+    font-weight: $font-weight-bold;
+    font-size: $font-size-sm;
+    @include border-top-radius($nav-tabs-border-radius);
+
+    &:hover,
+    &:focus {
+      border-color: var(--#{$prefix}white);
+    }
+
+    &.disabled {
+      color: var(--#{$prefix}gray-400);
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
+
+  .nav-item {
+    .nav-link {
+      font-family: $font-family-base;
+    }
+  }
+
+  .nav-link.active,
+  .nav-item.show .nav-link {
+    color: var(--#{$prefix}primary);
+    background-color: transparent;
+    border-bottom: 2px solid var(--#{$prefix}primary);
+  }
+}
+
+.nav-pills-falcon {
+  --#{$prefix}nav-link-font-size: #{$font-size-sm};
+  --#{$prefix}nav-link-font-weight: #{$font-weight-medium};
+
+  background-color: var(--#{$prefix}gray-100);
+  border-radius: 0.25rem !important;
+  border: 1px solid var(--#{$prefix}gray-200);
+  .nav-link {
+    padding: $btn-padding-y-sm $btn-padding-x-sm;
+  }
+
+  .btn {
+    box-shadow: none;
+    outline: 0;
+    color: var(--#{$prefix}gray-600);
+
+    &.active {
+      background-color: var(
+        --#{$prefix}nav-pills-falcon-active-bg-color
+      ) !important;
+      box-shadow: var(--#{$prefix}btn-falcon-box-shadow) !important;
+      color: var(--#{$prefix}btn-falcon-default-color);
+    }
+
+    &:active:focus {
+      box-shadow: none;
+    }
+
+    @include hover-focus {
+      color: var(--#{$prefix}btn-falcon-default-color);
+      background-color: unset;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+//* -------------------------------------------------------------------------- */
+/*                                 Theme                                      */
+/* -------------------------------------------------------------------------- */
+
+@import '~bootstrap/scss/_functions';
+@import 'theme/functions';
+
+@import 'user-variables';
+@import 'theme/variables';
+@import '~bootstrap/scss/variables';
+
+@import 'theme/maps';
+@import '~bootstrap/scss/maps'; // ---new---
+
+@import '~bootstrap/scss/mixins';
+@import 'theme/mixins';
+
+@import 'theme/_utilities';
+@import '~bootstrap/scss/utilities';
+
+@import '~bootstrap/scss/root';
+@import 'theme/root';
+
+/*-----------------------------------------------
+|   Bootstrap Styles
+-----------------------------------------------*/
+@import 'bootstrap';
+
+/*-----------------------------------------------
+|   Theme Styles
+-----------------------------------------------*/
+@import 'theme/theme';
